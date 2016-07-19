@@ -7,20 +7,14 @@
     android:layout_height="match_parent"
     tools:context="org.myleftstudio.browser.MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="#000000">
-
-        <org.xwalk.core.XWalkView
-            android:id="@+id/xwalkWebView"
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="#000000"
-            />
-
-    </LinearLayout>
+    <org.xwalk.core.XWalkView
+        android:id="@+id/xwalkView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main" />
 
 </android.support.constraint.ConstraintLayout>
