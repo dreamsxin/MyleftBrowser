@@ -7,13 +7,24 @@
     android:layout_height="match_parent"
     tools:context="org.myleftstudio.browser.MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        tools:layout_editor_absoluteY="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_main"
+        app:layout_constraintRight_toRightOf="@+id/activity_main" />
+
     <org.xwalk.core.XWalkView
         android:id="@+id/xwalkView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="#000000"
         app:layout_constraintLeft_toLeftOf="@+id/activity_main"
-        app:layout_constraintTop_toTopOf="@+id/activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintRight_toRightOf="@+id/activity_main"
         app:layout_constraintBottom_toBottomOf="@+id/activity_main" />
 
